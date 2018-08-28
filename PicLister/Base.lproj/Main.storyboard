@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="u3j-1J-XW3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pic Lister-->
+        <scene sceneID="3NQ-aO-lv0">
+            <objects>
+                <tableViewController id="ToU-DC-y86" customClass="MainTVC" customModule="PicLister" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="q6l-XC-Pyy">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="9ov-aP-HzU" detailTextLabel="YBU-MZ-Og3" imageView="pfI-1h-XUx" style="IBUITableViewCellStyleSubtitle" id="OxG-wZ-Evk">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OxG-wZ-Evk" id="3vh-25-UlB">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9ov-aP-HzU">
+                                            <rect key="frame" x="73" y="1" width="43" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YBU-MZ-Og3">
+                                            <rect key="frame" x="73" y="28" width="41" height="14"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="1024" id="pfI-1h-XUx">
+                                            <rect key="frame" x="15" y="0.0" width="43" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="edit" id="gzv-sp-lzE"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ToU-DC-y86" id="4Fh-c4-kTJ"/>
+                            <outlet property="delegate" destination="ToU-DC-y86" id="f5s-rL-odN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Pic Lister" id="yyp-Qo-m24">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="NeW-jd-01E">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="add" id="27T-Lz-qrM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uhs-cS-7JC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="546" y="313"/>
+        </scene>
+        <!--Add or Edit Pics-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="AddEditVC" customModule="PicLister" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7KN-93-jai">
+                                <rect key="frame" x="20" y="72" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mE5-92-hCM">
+                                <rect key="frame" x="20" y="110" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add or edit your pic and click save." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qT7-9G-Xg5">
+                                <rect key="frame" x="20" y="148" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ho-Au-Dsp">
+                                <rect key="frame" x="347" y="203" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="Ueo-to-VUI"/>
+                                    <constraint firstAttribute="height" constant="128" id="sHV-qu-VlI"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="piclister-camera"/>
+                                <connections>
+                                    <action selector="addImageFromCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hdf-h7-lhF"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="hVa-FM-2pY">
+                                <rect key="frame" x="125" y="339" width="350" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="Ct0-rW-bzv"/>
+                                    <constraint firstAttribute="height" constant="200" id="es3-0a-3FV"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcE-2C-VPb">
+                                <rect key="frame" x="125" y="203" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="iqw-kA-fE4"/>
+                                    <constraint firstAttribute="width" constant="128" id="xqe-q6-WF4"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="piclister-roll"/>
+                                <connections>
+                                    <action selector="addImageFromDevice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4XV-Gx-9ZR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hVa-FM-2pY" firstAttribute="top" secondItem="qcE-2C-VPb" secondAttribute="bottom" constant="8" symbolic="YES" id="CHI-Cm-cYR"/>
+                            <constraint firstItem="1ho-Au-Dsp" firstAttribute="trailing" secondItem="hVa-FM-2pY" secondAttribute="trailing" id="CNU-9s-cJU"/>
+                            <constraint firstItem="mE5-92-hCM" firstAttribute="top" secondItem="7KN-93-jai" secondAttribute="bottom" constant="8" symbolic="YES" id="CZz-WM-fLd"/>
+                            <constraint firstItem="qcE-2C-VPb" firstAttribute="top" secondItem="qT7-9G-Xg5" secondAttribute="bottom" constant="34" id="EbI-kj-iEz"/>
+                            <constraint firstItem="7KN-93-jai" firstAttribute="trailing" secondItem="mE5-92-hCM" secondAttribute="trailing" id="H05-EV-GmT"/>
+                            <constraint firstItem="7KN-93-jai" firstAttribute="leading" secondItem="mE5-92-hCM" secondAttribute="leading" id="IwN-AZ-DUN"/>
+                            <constraint firstItem="qT7-9G-Xg5" firstAttribute="top" secondItem="mE5-92-hCM" secondAttribute="bottom" constant="8" symbolic="YES" id="LOB-h4-O1j"/>
+                            <constraint firstItem="mE5-92-hCM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QsK-8c-vx1"/>
+                            <constraint firstItem="mE5-92-hCM" firstAttribute="leading" secondItem="qT7-9G-Xg5" secondAttribute="leading" id="Tdq-Vz-7kr"/>
+                            <constraint firstItem="mE5-92-hCM" firstAttribute="trailing" secondItem="qT7-9G-Xg5" secondAttribute="trailing" id="UpM-7F-Pa3"/>
+                            <constraint firstItem="qcE-2C-VPb" firstAttribute="leading" secondItem="hVa-FM-2pY" secondAttribute="leading" id="dMJ-1d-v1u"/>
+                            <constraint firstItem="7KN-93-jai" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="gze-cp-0x2"/>
+                            <constraint firstItem="hVa-FM-2pY" firstAttribute="centerX" secondItem="qT7-9G-Xg5" secondAttribute="centerX" id="tUt-X1-pEQ"/>
+                            <constraint firstItem="mE5-92-hCM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="uf8-vZ-kU9"/>
+                            <constraint firstItem="qcE-2C-VPb" firstAttribute="baseline" secondItem="1ho-Au-Dsp" secondAttribute="baseline" id="vAO-Zx-eOm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add or Edit Pics" id="5h7-g1-WpO">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="92o-si-fW3">
+                            <connections>
+                                <action selector="cancelTapped:" destination="BYZ-38-t0r" id="VzA-Ks-2jg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="sgz-ob-dfN">
+                            <connections>
+                                <action selector="saveTapped:" destination="BYZ-38-t0r" id="udl-o2-ZIF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="picLocation" destination="mE5-92-hCM" id="5pN-Pz-OoP"/>
+                        <outlet property="picTitle" destination="7KN-93-jai" id="3A4-BZ-bMa"/>
+                        <outlet property="placeholderImage" destination="hVa-FM-2pY" id="Pvq-iB-l4V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1195" y="313"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gcT-hn-ZeU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u3j-1J-XW3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7ha-u4-qfx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ToU-DC-y86" kind="relationship" relationship="rootViewController" id="97g-Ne-HcZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0xf-H7-Hfa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266" y="313"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1024" width="1024" height="1024"/>
+        <image name="add-image" width="350" height="200"/>
+        <image name="piclister-camera" width="175" height="175"/>
+        <image name="piclister-roll" width="175" height="175"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="27T-Lz-qrM"/>
+    </inferredMetricsTieBreakers>
+</document>
